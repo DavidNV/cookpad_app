@@ -16,8 +16,6 @@
 /log/*
 /tmp
 /public/assets/*
-/public/excel_files/*
-/.idea/*
 *.sql
 *.sublime-workspace
 doc/*.sql
@@ -47,9 +45,9 @@ TAGS
 .ssh
 node_modules/
 gems/
-/public/packs
+/public/webpack
 /node_modules
 log/
-public/packs-test/
+public/webpack-test/
 *.log
 karma-*/

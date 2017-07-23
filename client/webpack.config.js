@@ -21,7 +21,7 @@ const config = {
       'es5-shim/es5-shim',
       'es5-shim/es5-sham',
       'babel-polyfill',
-      './app/bundles/LandingPage/startup/registration',
+      './app/bundles/CookpadApp/startup/registration',
     ],
   },
 
