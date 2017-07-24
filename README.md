@@ -1,5 +1,2 @@
 # README
-
-Template for a basic server-side rendered landing page built using React and Ruby on Rails.
-Tutorial Link - https://engineering.musefind.com/build-your-first-server-side-rendered-react-app-with-rails-f1b43aa97723
-
+My app to appyl on Cookpad :)

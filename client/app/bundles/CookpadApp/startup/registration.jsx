@@ -1,7 +1,9 @@
 import ReactOnRails from 'react-on-rails';
 
-import Landing from '../components/Landing';
+import PictureBox from '../components/PictureBox';
+import Comment from '../components/Comment';
 
 ReactOnRails.register({
-  Landing,
+  PictureBox,
+  Comment,
 });

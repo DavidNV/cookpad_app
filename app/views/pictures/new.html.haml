@@ -1,0 +1,21 @@
+= render "shared/nav_bar"
+.landing-dashboard
+  .dashboard-container
+    .sign_forms
+      .form-format
+        = form_for(@picture, url: pictures_path, method: :post, html: { multipart: true , action: pictures_path}) do |f|
+          .field
+            = f.label :title
+            %br
+            = f.text_field :title
+          .field
+            = f.label :description
+            %br
+            = f.text_area :description
+          .field
+            = f.label :image
+            %input{type: "hidden", name: "picture[user_id]", value: current_user.id}
+            %br
+            = f.file_field :image
+            %br
+            = f.submit("Upload picture", class: "button-submit")

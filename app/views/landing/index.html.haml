@@ -1,42 +1,10 @@
-%body
-  .landing-container
-    .landing-dashboard
-      .landing-Header
-        .header-server-logo
-        .header-button-container
-          .landing-button.login
-            = link_to new_user_session_path do
-              %p = "Log in"
-          .landing-button.signup
-            = link_to do
-              %p ="Sign up"
-              %a{href: new_user_registration_path}
-      .dashboard-container
-        .dashboard-title
-          %h1="CookImagepad. Upload, comment, create"
-        .dashboard-text
-        .dashboard-button-container
-          %a{:href => "#"}
-            .dashboard-button
-              %p="START COMMETING AND SHARING"
-    %footer.server-footer-container.row
-      .server-logos-container
-        %p="COPYRIGHT @ 2017 SERVERSIDE TECHNOLOGIES"
-        .made-in
-          %p="Made in Gastown, Vancouver."
-      .server-links-container
-        .server-link-column.non-mobile
-          %a{:href => "#"}
-            %p Log In
-          %a{:href => "#"}
-            %p Create an Account
-          %a{:href => "#"}
-            %p My Profile
-          %a{:href => "#"}
-            %p Sign Out
-        %div{:classname => "server-link-column"}
-          %p About
-          %p Contact
-          %p Terms
-          %p Privacy
-
+= render "shared/nav_bar"
+.landing-dashboard
+  .dashboard-container
+    .dashboard-title
+      %h1="CookImagepad. Upload, comment, create"
+    .dashboard-text
+    .dashboard-button-container
+      %a{:href => "#"}
+        .dashboard-button
+          %p="START COMMETING AND SHARING"

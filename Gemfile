@@ -5,7 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'react_on_rails', '8.0.3'
+gem 'react-rails'
+gem 'webpacker', '~> 2.0'
 gem 'pg'
 gem 'foreman'
 gem 'carrierwave'
@@ -14,6 +15,7 @@ gem 'devise'
 gem 'haml'
 gem 'rails', '~> 5.1.1'
 gem 'sqlite3'
+gem 'jquery-rails'
 gem 'puma', '~> 3.7'
 gem 'sass-rails'
 gem 'uglifier', '>= 1.3.0'
@@ -23,6 +25,8 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   gem 'byebug'
   gem 'capybara', '~> 2.13'
+  gem 'rspec-rails', '3.5.2'
+  gem "chromedriver-helper"
   gem 'selenium-webdriver'
 end
 
@@ -35,4 +39,3 @@ end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'mini_racer', platforms: :ruby
-gem 'webpacker_lite'

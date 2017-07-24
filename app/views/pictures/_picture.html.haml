@@ -1,0 +1,8 @@
+%li.pictures
+  %figure
+    %img{src: picture.image.url} 
+  .landing.button.login
+    = link_to("Picture details", picture_path(picture))
+  - if picture.user_id.eql?(current_user.id)
+    .landing.button.login
+      = link_to("Delete picture", picture_path(picture), method: :delete)

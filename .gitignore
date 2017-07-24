@@ -51,3 +51,5 @@ log/
 public/webpack-test/
 *.log
 karma-*/
+/public/packs
+/node_modules

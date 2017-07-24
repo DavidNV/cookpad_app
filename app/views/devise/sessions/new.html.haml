@@ -1,0 +1,22 @@
+= render "shared/nav_bar"
+.landing-dashboard
+  .dashboard-container
+    .sign_forms
+      .form-title
+        %img{src: "https://lh3.googleusercontent.com/EKKI-Yd_7nQHMfEo9o4sTnUG9Uv-AGuHF2j3exarqQcg8xYyHg4eCCOY2Jw3SvY9ekI=w300"}
+        %h2="Welcome back!"
+      .form-format
+        = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+          %br
+          = f.label :email
+          %br
+          = f.email_field :email, autofocus: true
+          %br
+          = f.label :password
+          %br
+          = f.password_field :password, autocomplete: "off"
+          - if devise_mapping.rememberable?
+            = f.check_box :remember_me
+            = f.label :remember_me
+          %br
+          = f.submit("Log in",  class: "button-submit")

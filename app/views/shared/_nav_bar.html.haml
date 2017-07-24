@@ -1,0 +1,14 @@
+.landing-header
+  .header-server-logo
+    %a{href: root_path }
+      %img{src: "https://global.cpcdn.com/en/assets/logo_cookpad_large-827bc0b34d5c7ab322d3ff8de882e9f828d06bc5ae46d09c88d25aaf02686132.png"}
+  .landing-choices
+    .choices-set
+      %p="What are we?"
+    .choices-set
+      %a{:href => pictures_path}
+        %p="Check the photos"
+    .choices-set
+      %p="Learn about us"
+  .header-button-container
+    = render define_actions_for_resource(current_user)

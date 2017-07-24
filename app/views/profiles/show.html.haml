@@ -1,0 +1,8 @@
+= render "shared/nav_bar"
+.landing-dashboard
+  .dashboard-container
+    - if @pictures.any?
+      %ul.pictures-container
+        = render partial: "pictures/picture", collection: @pictures
+    - else
+      %h2="No pictures yet!"

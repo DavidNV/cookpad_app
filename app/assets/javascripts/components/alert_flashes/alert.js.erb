@@ -1,0 +1,38 @@
+<% helpers = ActionController::Base.helpers %>
+
+import React, { Component } from 'react'
+
+class Alert extends Component {
+
+  alertClass (type) {
+    let classes = {
+      error: 'error-message',
+      alert: 'warning-message',
+      notice: 'info-message',
+      success: 'success-message'
+    };
+
+    return classes[type] || classes.success
+  }
+
+  render() {
+    const message = this.props.message;
+    const alertClassName = `alert-message ${ this.alertClass(message.type) } fade in`
+ 
+    return(
+      <div className={ alertClassName }>
+        <button className='close-message'
+          onClick={ this.props.onClose }>
+          &times;
+        </button>
+        <div className="container-message">
+          <h5>
+            { message.text }
+          </h5>
+        </div>
+      </div>
+    )
+  }
+}
+
+export default Alert

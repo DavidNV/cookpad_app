@@ -1,0 +1,24 @@
+= render "shared/nav_bar"
+.landing-dashboard
+  .dashboard-container
+    .sign_forms
+      .form-title
+        %img{src: "https://lh3.googleusercontent.com/EKKI-Yd_7nQHMfEo9o4sTnUG9Uv-AGuHF2j3exarqQcg8xYyHg4eCCOY2Jw3SvY9ekI=w300"}
+        %h2="You're almost done"
+      .form-format
+        = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+          = devise_error_messages!
+          %br
+          = f.label "Email"
+          %br
+          = f.email_field :email, autofocus: true, placeholder: "example@mail.com"
+          %br
+          = f.label "Password"
+          %br
+          = f.password_field :password, autocomplete: "off"
+          %br
+          = f.label "Password Confirmation"
+          %br
+          = f.password_field :password_confirmation, autocomplete: "off"
+          %br
+          = f.submit("Sign up", class: "button-submit")

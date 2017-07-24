@@ -1,0 +1,5 @@
+= render "shared/nav_bar"
+.landing-dashboard
+  .dashboard-container
+    %ul.pictures-container
+      = react_component("picture_box", {picture: @parsed_picture, currentUser: current_user}, prerender: false)
